@@ -19,4 +19,8 @@ communication/
 - Submit via the [submission form](https://github.com/Drvivek34/Skill-Bazaar/issues/new/choose).
 
 ## Entries
-_No entries yet — be the first to contribute!_
+
+| Entry | Description |
+|---|---|
+| [Internal Comms](internal-comms/) | This skill provides specialized capability for `internal-comms` within Claude and other agent environments. |
+| [Slack Gif Creator](slack-gif-creator/) | This skill provides specialized capability for `slack-gif-creator` within Claude and other agent environments. |

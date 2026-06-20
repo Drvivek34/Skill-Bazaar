@@ -19,4 +19,7 @@ marketing-seo/
 - Submit via the [submission form](https://github.com/Drvivek34/Skill-Bazaar/issues/new/choose).
 
 ## Entries
-_No entries yet — be the first to contribute!_
+
+| Entry | Description |
+|---|---|
+| [Brand Guidelines](brand-guidelines/) | This skill provides specialized capability for `brand-guidelines` within Claude and other agent environments. |

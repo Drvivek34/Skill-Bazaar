@@ -19,4 +19,9 @@ coding-development/
 - Submit via the [submission form](https://github.com/Drvivek34/Skill-Bazaar/issues/new/choose).
 
 ## Entries
-_No entries yet — be the first to contribute!_
+
+| Entry | Description |
+|---|---|
+| [Mcp Builder](mcp-builder/) | This skill provides specialized capability for `mcp-builder` within Claude and other agent environments. |
+| [Skill Creator](skill-creator/) | This skill provides specialized capability for `skill-creator` within Claude and other agent environments. |
+| [Web Artifacts Builder](web-artifacts-builder/) | This skill provides specialized capability for `web-artifacts-builder` within Claude and other agent environments. |

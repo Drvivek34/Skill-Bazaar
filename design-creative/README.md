@@ -19,4 +19,10 @@ design-creative/
 - Submit via the [submission form](https://github.com/Drvivek34/Skill-Bazaar/issues/new/choose).
 
 ## Entries
-_No entries yet — be the first to contribute!_
+
+| Entry | Description |
+|---|---|
+| [Algorithmic Art](algorithmic-art/) | This skill provides specialized capability for `algorithmic-art` within Claude and other agent environments. |
+| [Canvas Design](canvas-design/) | This skill provides specialized capability for `canvas-design` within Claude and other agent environments. |
+| [Frontend Design](frontend-design/) | This skill provides specialized capability for `frontend-design` within Claude and other agent environments. |
+| [Theme Factory](theme-factory/) | This skill provides specialized capability for `theme-factory` within Claude and other agent environments. |

@@ -19,4 +19,8 @@ writing-content/
 - Submit via the [submission form](https://github.com/Drvivek34/Skill-Bazaar/issues/new/choose).
 
 ## Entries
-_No entries yet — be the first to contribute!_
+
+| Entry | Description |
+|---|---|
+| [Doc Coauthoring](doc-coauthoring/) | This skill provides specialized capability for `doc-coauthoring` within Claude and other agent environments. |
+| [Docx](docx/) | This skill provides specialized capability for `docx` within Claude and other agent environments. |
