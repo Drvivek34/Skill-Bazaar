@@ -1,0 +1,81 @@
+name: "➕ Submit a Skill"
+description: "Add an Agent Skill (SKILL.md) to the Skill Bazaar."
+title: "[Skill] <name of skill>"
+labels: ["submission", "skill"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for contributing to **Skill Bazaar**! Fill this in and a maintainer or automated agent will add it. Attribution is mandatory."
+  - type: input
+    id: name
+    attributes:
+      label: Skill name
+      placeholder: "e.g. pdf-form-filler"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source URL
+      description: Link to the original repo/file.
+      placeholder: "https://github.com/owner/repo/tree/main/skills/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - coding-development
+        - data-analysis
+        - writing-content
+        - research
+        - productivity
+        - devops-infrastructure
+        - security
+        - design-creative
+        - business-finance
+        - marketing-seo
+        - education
+        - automation
+        - ai-ml
+        - testing-qa
+        - documentation
+        - web-scraping-data
+        - media-audio-video
+        - science-math
+        - legal-compliance
+        - healthcare-medical
+        - communication
+        - misc
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author / credit
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: Original license
+      placeholder: "e.g. MIT, Apache-2.0, CC-BY-4.0, unknown"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does this skill do?
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have provided the source and original license; this is properly attributed.
+          required: true
+        - label: Nominate this for the ⭐ Featured shelf (optional).
+          required: false
