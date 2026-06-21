@@ -20,4 +20,6 @@ documentation/
 
 ## Entries
 
-_No entries yet — be the first to contribute!_
+| Entry | Description |
+|---|---|
+| [Api Documentation](api-documentation/) | Guides agents in standardizing public API documentation, drafting schemas, and verifying response examples. |

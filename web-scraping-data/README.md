@@ -20,4 +20,6 @@ web-scraping-data/
 
 ## Entries
 
-_No entries yet — be the first to contribute!_
+| Entry | Description |
+|---|---|
+| [Web Scraper](web-scraper/) | An agent skill that details web scraping workflows, selectors handling, dynamic pages rendering, and data export. |

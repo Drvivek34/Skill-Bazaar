@@ -23,3 +23,4 @@ ai-ml/
 | Entry | Description |
 |---|---|
 | [Claude Api](claude-api/) | This skill provides specialized capability for `claude-api` within Claude and other agent environments. |
+| [Rag Knowledge Base](rag-knowledge-base/) | A portable agent skill designed to guide models through building, chunking, indexing, and querying semantic search indices. |
