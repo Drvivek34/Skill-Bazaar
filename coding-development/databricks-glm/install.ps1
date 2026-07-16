@@ -1,4 +1,4 @@
-# Install Databricks GLM package for Grok, Claude Code, Codex, OpenCode, Cursor, agents.
+﻿# Install Databricks GLM package for Grok, Claude Code, Codex, OpenCode, Cursor, agents.
 # Usage:
 #   .\install.ps1
 #   .\install.ps1 -AutoStart
@@ -40,7 +40,10 @@ $ProxyDir = Join-Path $HomeDir ".grok\proxies"
 Ensure-Dir $ProxyDir
 Copy-Item (Join-Path $Root "scripts\databricks_glm_proxy.py") (Join-Path $ProxyDir "databricks_glm_proxy.py") -Force
 Copy-Item (Join-Path $Root "scripts\ensure-proxy.ps1") (Join-Path $ProxyDir "ensure-proxy.ps1") -Force
-Copy-Item (Join-Path $Root "scripts\start-proxy.ps1") (Join-Path $ProxyDir "start-databricks-glm-proxy.ps1") -Force
+Copy-Item (Join-Path $Root "scripts\start-proxy.ps1") (Join-Path $ProxyDir "start-databricks-glm-proxy.ps1") -Force -ErrorAction SilentlyContinue
+Copy-Item (Join-Path $Root "scripts\change-config.ps1") (Join-Path $ProxyDir "change-config.ps1") -Force -ErrorAction SilentlyContinue
+Copy-Item (Join-Path $Root "scripts\change-config.sh") (Join-Path $ProxyDir "change-config.sh") -Force -ErrorAction SilentlyContinue
+Copy-Item (Join-Path $Root "scripts\ensure-proxy.sh") (Join-Path $ProxyDir "ensure-proxy.sh") -Force -ErrorAction SilentlyContinue
 Write-Host "  proxy -> $ProxyDir"
 
 # 2) Skill destinations (create parent if missing so install works even if agent not installed yet)
@@ -190,3 +193,4 @@ Write-Host "  1. Set env DATABRICKS_TOKEN (user or system)"
 Write-Host "  2. /glm   or   powershell -File $ProxyDir\ensure-proxy.ps1"
 Write-Host "  3. Grok: /model databricks-glm"
 Write-Host "Restart agent sessions so skills/hooks reload."
+

@@ -1,8 +1,8 @@
-# Databricks GLM proxy + `/glm` skill
+﻿# Databricks GLM proxy + `/glm` skill
 
 Cross-agent package so **Claude Code, Codex, OpenCode, Grok, Cursor**, and other SKILL.md-compatible tools can use **Databricks-hosted GLM-5-2** with **full tool calling**.
 
-Part of **[Custom Instruction Bazaar](https://github.com/Drvivek34/Custom-Instruction-Bazaar)** / **[Skill Bazaar](https://github.com/Drvivek34/Skill-Bazaar)** · [Mega AI Bazaar](https://drvivek34.github.io/Mega-AI-Bazaar/)
+Part of **[Custom Instruction Bazaar](https://github.com/Drvivek34/Custom-Instruction-Bazaar)** / **[Skill Bazaar](https://github.com/Drvivek34/Skill-Bazaar)** Â· [Mega AI Bazaar](https://drvivek34.github.io/Mega-AI-Bazaar/)
 
 ## Problem
 
@@ -84,3 +84,15 @@ Other agents: `base_url=http://127.0.0.1:8787`, model `system.ai.glm-5-2`
 ## License
 
 MIT (same as Mega AI Bazaar collections unless noted).
+
+## Change config (/glm change)
+
+`powershell
+# Interactive prompts (token, upstream URL, model, port):
+powershell -ExecutionPolicy Bypass -File $env:USERPROFILE\.grok\proxies\change-config.ps1
+
+# Or in any agent: /glm change  (agent asks you, then runs non-interactive flags)
+powershell -ExecutionPolicy Bypass -File $env:USERPROFILE\.grok\proxies\change-config.ps1 -StatusOnly
+`
+
+Settings are saved to `~/.grok/proxies/glm.env` (gitignored / never commit tokens).

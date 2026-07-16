@@ -18,6 +18,33 @@ import os
 import urllib.error
 import urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+
+
+def _load_glm_env() -> None:
+    """Load ~/.grok/proxies/glm.env into os.environ (does not override existing)."""
+    candidates = [
+        Path(__file__).resolve().parent / "glm.env",
+        Path.home() / ".grok" / "proxies" / "glm.env",
+    ]
+    for path in candidates:
+        if not path.is_file():
+            continue
+        try:
+            for raw in path.read_text(encoding="utf-8").splitlines():
+                line = raw.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                key, _, val = line.partition("=")
+                key, val = key.strip(), val.strip().strip('"').strip("'")
+                if key and key not in os.environ:
+                    os.environ[key] = val
+        except OSError:
+            pass
+        break
+
+
+_load_glm_env()
 
 UPSTREAM = os.environ.get(
     "DATABRICKS_UPSTREAM",
