@@ -1,0 +1,15 @@
+# Paste into ~/.grok/config.toml (or merge via install.ps1)
+
+[model.databricks-glm]
+model = "system.ai.glm-5-2"
+# Direct Databricks omits `model` on tool-call stream chunks.
+# Proxy injects the field — start via /glm or ensure-proxy.
+base_url = "http://127.0.0.1:8787"
+name = "Databricks GLM-5-2"
+description = "Databricks GLM-5-2 via local patch proxy (required for tool calls)"
+env_key = "DATABRICKS_TOKEN"
+api_backend = "chat_completions"
+context_window = 1000000
+max_completion_tokens = 16384
+stream_tool_calls = false
+supports_backend_search = false
