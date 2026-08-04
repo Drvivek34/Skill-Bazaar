@@ -22,4 +22,4 @@ devops-infrastructure/
 
 | Entry | Description |
 |---|---|
-| [Ci Cd Troubleshooter](ci-cd-troubleshooter/) | Assists agents in interpreting failing build stack traces, resolving version pinning, and fixing YAML config files. |
+| [CI/CD Pipeline Troubleshooter](ci-cd-troubleshooter/) | Assists agents in interpreting failing build stack traces, resolving version pinning, and fixing YAML config files. |

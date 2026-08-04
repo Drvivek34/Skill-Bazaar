@@ -20,4 +20,5 @@ media-audio-video/
 
 ## Entries
 
-_No entries yet — be the first to contribute!_
+| Entry | Description |
+|---|---|

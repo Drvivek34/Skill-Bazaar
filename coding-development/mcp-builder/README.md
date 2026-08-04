@@ -8,8 +8,10 @@ This skill provides specialized capability for `mcp-builder` within Claude and o
 - **Name**: mcp-builder
 - **Source URL**: https://github.com/anthropics/skills/tree/main/skills/mcp-builder
 - **Author**: Anthropic
-- **License**: MIT
-- **Date Added**: 2026-06-20
+- **License**: Apache-2.0 (see upstream repository)
+- **Date Added**: 2026-08-04
+- **Last Reviewed**: 2026-08-04
+- **Upstream Revision**: `anthropics/skills@b29e7cf`
 
 ## Instructions
 See [SKILL.md](SKILL.md) inside this folder for detailed instructions.

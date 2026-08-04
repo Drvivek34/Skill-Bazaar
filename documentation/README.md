@@ -22,4 +22,4 @@ documentation/
 
 | Entry | Description |
 |---|---|
-| [Api Documentation](api-documentation/) | Guides agents in standardizing public API documentation, drafting schemas, and verifying response examples. |
+| [API Documentation Generator](api-documentation/) | Guides agents in standardizing public API documentation, drafting schemas, and verifying response examples. |

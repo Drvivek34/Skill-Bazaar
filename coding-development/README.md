@@ -22,6 +22,7 @@ coding-development/
 
 | Entry | Description |
 |---|---|
+| [From this folder:](databricks-glm/) | .\install.ps1 ``` |
 | [Mcp Builder](mcp-builder/) | This skill provides specialized capability for `mcp-builder` within Claude and other agent environments. |
 | [Skill Creator](skill-creator/) | This skill provides specialized capability for `skill-creator` within Claude and other agent environments. |
 | [Web Artifacts Builder](web-artifacts-builder/) | This skill provides specialized capability for `web-artifacts-builder` within Claude and other agent environments. |

@@ -22,4 +22,4 @@ web-scraping-data/
 
 | Entry | Description |
 |---|---|
-| [Web Scraper](web-scraper/) | An agent skill that details web scraping workflows, selectors handling, dynamic pages rendering, and data export. |
+| [Playwright Web Scraper](web-scraper/) | An agent skill that details web scraping workflows, selectors handling, dynamic pages rendering, and data export. |

@@ -5,9 +5,11 @@ import shutil
 import subprocess
 import re
 from datetime import datetime
+from pathlib import Path
 
-SKILLS_BAZAAR_DIR = "/root/bazaars/Skill-Bazaar"
-TEMP_CLONE_DIR = "/root/bazaars/temp-skills-clone"
+REPO_DIR = Path(__file__).resolve().parent
+SKILLS_BAZAAR_DIR = str(REPO_DIR)
+TEMP_CLONE_DIR = str(REPO_DIR.parent / "temp-skills-clone")
 REPO_URL = "https://github.com/anthropics/skills.git"
 
 CATEGORIES_MAPPING = {
@@ -42,8 +44,11 @@ def main():
     if os.path.exists(TEMP_CLONE_DIR):
         shutil.rmtree(TEMP_CLONE_DIR)
 
-    print("Cloning anthropics/skills...")
-    run_cmd(f"git clone {REPO_URL} {TEMP_CLONE_DIR}")
+    print("Cloning the latest anthropics/skills snapshot...")
+    run_cmd(f"git clone --depth 1 {REPO_URL} {TEMP_CLONE_DIR}")
+    upstream_commit = subprocess.check_output(
+        ["git", "-C", TEMP_CLONE_DIR, "rev-parse", "--short", "HEAD"], text=True
+    ).strip()
 
     skills_source = os.path.join(TEMP_CLONE_DIR, "skills")
     if not os.path.exists(skills_source):
@@ -64,7 +69,7 @@ def main():
 
         # Determine category slug
         cat_slug = CATEGORIES_MAPPING.get(skill, "misc")
-        
+
         # Target folder
         prov_slug = kebab_case(skill)
         target_dir = os.path.join(SKILLS_BAZAAR_DIR, cat_slug, prov_slug)
@@ -81,7 +86,15 @@ def main():
             else:
                 shutil.copy(s_item, d_item)
 
-        # Let's write the required meta README.md in the folder
+        # Document skills are source-available; the remaining examples are open source
+        # under the upstream Apache 2.0 notice.
+        license_note = (
+            "Source-available (see upstream README; not open source)"
+            if skill in {"docx", "pdf", "pptx", "xlsx"}
+            else "Apache-2.0 (see upstream repository)"
+        )
+
+        # Write the required attribution README.md in the folder
         meta_readme = f"""# {skill.replace('-', ' ').title()}
 
 This skill provides specialized capability for `{skill}` within Claude and other agent environments.
@@ -92,8 +105,10 @@ This skill provides specialized capability for `{skill}` within Claude and other
 - **Name**: {skill}
 - **Source URL**: https://github.com/anthropics/skills/tree/main/skills/{skill}
 - **Author**: Anthropic
-- **License**: MIT
+- **License**: {license_note}
 - **Date Added**: {today_str}
+- **Last Reviewed**: {today_str}
+- **Upstream Revision**: `anthropics/skills@{upstream_commit}`
 
 ## Instructions
 See [SKILL.md](SKILL.md) inside this folder for detailed instructions.
