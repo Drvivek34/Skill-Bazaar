@@ -23,3 +23,4 @@ web-scraping-data/
 | Entry | Description |
 |---|---|
 | [Playwright Web Scraper](web-scraper/) | An agent skill that details web scraping workflows, selectors handling, dynamic pages rendering, and data export. |
+| [x-twitter-scraper](x-twitter-scraper/) | Source-backed X/Twitter REST and MCP research, exports, monitoring, webhooks, and confirmed actions. |
