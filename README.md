@@ -7,8 +7,9 @@
 Skill Bazaar gathers **Agent Skills** — the portable `SKILL.md` capability folders used by Claude and other agents — from across GitHub and the wider web into one browsable, categorized marketplace. The most popular skills are surfaced in **featured/** at the very front.
 
 ## 🔄 Current snapshot
-- **22 curated skills** are currently indexed across the category folders.
+- **23 curated skills** are currently indexed across the category folders.
 - Refreshed **2026-08-04** from the latest public snapshot of [anthropics/skills](https://github.com/anthropics/skills), alongside existing attributed entries.
+- Added **2026-08-24**: [web-search-api](research/web-search-api/) — live web-search provider selection (Tavily, Exa, Firecrawl, Brave, Serper, Google CSE, SearXNG) with current free-tier limits and correct per-provider auth shapes.
 - Upstream additions retain their source `SKILL.md` files and include an attribution README with the upstream revision used.
 
 ## 📂 Categories

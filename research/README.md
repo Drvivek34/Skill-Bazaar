@@ -22,3 +22,4 @@ research/
 
 | Entry | Description |
 |---|---|
+| [Web Search API Integration](web-search-api/) | Provider selection + correct auth shapes (Tavily, Exa, Firecrawl, Brave, Serper, Google CSE, SearXNG), reference implementations, free-tier quota discipline. |
