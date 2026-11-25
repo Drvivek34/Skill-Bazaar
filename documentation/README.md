@@ -22,4 +22,7 @@ documentation/
 
 | Entry | Description |
 |---|---|
+| [govisit-get-documentation-page](govisit-get-documentation-page/) | Read bounded structured content from the selected published article. Use when an agent needs this published GoVisit evidence through HTTP for an integration or travel decision. |
+| [govisit-get-page-faq](govisit-get-page-faq/) | Read the published questions and answers on the selected blog or documentation article. Use when an agent needs this published GoVisit evidence through HTTP for an integration or travel decision. |
+| [govisit-search-documentation](govisit-search-documentation/) | Search the published documentation links rendered on the selected documentation index page. Use when an agent needs this published GoVisit evidence through HTTP for an integration or travel decision. |
 | [API Documentation Generator](api-documentation/) | Guides agents in standardizing public API documentation, drafting schemas, and verifying response examples. |
